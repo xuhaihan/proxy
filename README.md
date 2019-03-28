@@ -2,6 +2,7 @@
   在配置文件配置免费代理配置源，通过api接口获取代理
 ## 环境要求
 1.go版本至少1.9
+
 2.拉取项目之前先安装需要依赖,使用以下命令：
 ```
    go get -u github.com/AceDarkknight/GoProxyCollector
