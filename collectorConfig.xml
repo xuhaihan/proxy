@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configs>
+    <config name="89ip">
+        <urlFormat>http://www.89ip.cn/tqdl.html?api=1&amp;num=30&amp;port=&amp;address=&amp;isp=</urlFormat>
+        <collectType>1</collectType>
+        <charset>utf-8</charset>
+        <valueNameRuleMap>
+            <item name="ip" rule="((?:(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.){3}(?:25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))):[1-9]\d*"/>
+        </valueNameRuleMap>
+    </config>
+    <config name="ip3366">
+        <urlFormat>http://www.ip3366.net/?stype=1&amp;page=%s</urlFormat>
+        <urlParameters>1,2,3,4,5,6,7,8,9,10</urlParameters>
+        <collectType>0</collectType>
+        <charset>gbk</charset>
+        <valueNameRuleMap>
+            <item name="table" rule="#list tr:not(:first-child)"/>
+            <item name="ip" rule="td:nth-child(1)"/>
+            <item name="port" rule="td:nth-child(2)"/>
+            <item name="location" rule="td:nth-child(6)"/>
+            <item name="speed" rule="td:nth-child(7)"/>
+        </valueNameRuleMap>
+    </config>
+    <config name="kuaidaili">
+        <urlFormat>https://www.kuaidaili.com/free/intr/%s</urlFormat>
+        <urlParameters>1,2,3,4,5,6,7,8,9,10</urlParameters>
+        <collectType>0</collectType>
+        <charset>utf-8</charset>
+        <valueNameRuleMap>
+            <item name="table" rule="#list tr:not(:first-child)"/>
+            <item name="ip" rule="td:nth-child(1)"/>
+            <item name="port" rule="td:nth-child(2)"/>
+            <item name="location" rule="td:nth-child(5)"/>
+            <item name="speed" rule="td:nth-child(6)"/>
+        </valueNameRuleMap>
+    </config>
+    <config name="kuaidaili2">
+        <urlFormat>https://www.kuaidaili.com/free/inha/%s</urlFormat>
+        <urlParameters>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20</urlParameters>
+        <collectType>0</collectType>
+        <charset>utf-8</charset>
+        <valueNameRuleMap>
+            <item name="table" rule="#list tr:not(:first-child)"/>
+            <item name="ip" rule="td:nth-child(1)"/>
+            <item name="port" rule="td:nth-child(2)"/>
+            <item name="location" rule="td:nth-child(5)"/>
+            <item name="speed" rule="td:nth-child(6)"/>
+        </valueNameRuleMap>
+    </config>
+    <config name="xicidaili">
+        <urlFormat>http://www.xicidaili.com/nn/%s</urlFormat>
+        <urlParameters>1,2,3</urlParameters>
+        <collectType>0</collectType>
+        <charset>utf-8</charset>
+        <valueNameRuleMap>
+            <item name="table" rule="#ip_list tr:not(:first-child)"/>
+            <item name="ip" rule="td:nth-child(2)"/>
+            <item name="port" rule="td:nth-child(3)"/>
+            <item name="location" rule="td:nth-child(4) a"/>
+            <item name="speed" rule="td:nth-child(7) div" attribute="title"/>
+        </valueNameRuleMap>
+    </config>
+    <config name="xicidaili2">
+        <urlFormat>http://www.xicidaili.com/nt/%s</urlFormat>
+        <urlParameters>1,2,3</urlParameters>
+        <collectType>0</collectType>
+        <charset>utf-8</charset>
+        <valueNameRuleMap>
+            <item name="table" rule="#ip_list tr:not(:first-child)"/>
+            <item name="ip" rule="td:nth-child(2)"/>
+            <item name="port" rule="td:nth-child(3)"/>
+            <item name="location" rule="td:nth-child(4) a"/>
+            <item name="speed" rule="td:nth-child(7) div" attribute="title"/>
+        </valueNameRuleMap>
+    </config>
+</configs>
