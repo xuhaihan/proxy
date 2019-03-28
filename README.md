@@ -45,8 +45,6 @@ GET http://localhost:8090/delete?ip=1.2.3.4
 - http://www.89ip.cn
 - http://www.kxdaili.com/
 - https://www.kuaidaili.com
-- http://www.ip3366.net/
-- http://www.data5u.com
 
 ## 配置其他代理
    如果想获取其他来源的代理，在collectorConfig.xml中进行配置
